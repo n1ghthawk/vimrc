@@ -60,3 +60,5 @@ set backspace=indent,eol,start
 :imap <C-J> <Plug>snipMateNextOrTrigger
 :smap <C-J> <Plug>snipMateNextOrTrigger
 let g:ycm_auto_trigger = 0
+" disable extra information in preview window
+set completeopt=menu,menuone
