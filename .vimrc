@@ -35,6 +35,7 @@ Plugin 'kana/vim-textobj-entire'
 Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'mihaifm/vimpanel'
 Plugin 'Raimondi/delimitMate'
+
 " non-GitHub repos
 " Git repos on your local machine (i.e. when working on your own plugin)
 " ...
