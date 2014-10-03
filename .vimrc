@@ -35,7 +35,8 @@ Plugin 'kana/vim-textobj-entire'
 Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'mihaifm/vimpanel'
 Plugin 'Raimondi/delimitMate'
-
+Plugin 'chriskempson/base16-vim'
+"
 " non-GitHub repos
 " Git repos on your local machine (i.e. when working on your own plugin)
 " ...
@@ -50,23 +51,24 @@ filetype plugin indent on " required!
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle commands are not allowed.
-nmap <C-v> "*gp
-:map<C-c> "+y
 autocmd FileType *.php set ft=php.laravel
 autocmd Filetype *.blade.php set ft=php.laravel.blade
 set et
 au FileType html setl sw=2 sts=2 et
-au FileType php setl sw=4 sts=4 et
+au FileType php setl sw=2 sts=2 et
 au FileType python setl sw=4 sts=4 et
 au FileType ruby setl sw=2 sts=2 et
-color chance-of-storm
+let base16colorspace=256 " Access colors present in 256 color space
+set background=dark
+colorscheme base16-flat
 set nu
 syntax on
+hi MatchParen cterm=none ctermbg=white ctermfg=magenta
 set cursorline
 set backspace=2
 set backspace=indent,eol,start
-:imap <C-J> <Plug>snipMateNextOrTrigger
-:smap <C-J> <Plug>snipMateNextOrTrigger
+:imap <C-j> <Plug>snipMateNextOrTrigger
+:smap <C-j> <Plug>snipMateNextOrTrigger
 let g:ycm_auto_trigger = 0
 " disable extra information in preview window
 set completeopt=menu,menuone
