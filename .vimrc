@@ -16,7 +16,6 @@ Plugin 'gmarik/vundle'
 " original repos on GitHub
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'rstacruz/sparkup'
 Plugin 'tpope/vim-rails.git'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'xsbeats/vim-blade'
@@ -32,10 +31,12 @@ Plugin 'L9'
 Plugin 'FuzzyFinder'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-entire'
-Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'mihaifm/vimpanel'
 Plugin 'Raimondi/delimitMate'
 Plugin 'chriskempson/base16-vim'
+Bundle 'pangloss/vim-javascript'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'jelera/vim-javascript-syntax'
 "
 " non-GitHub repos
 " Git repos on your local machine (i.e. when working on your own plugin)
@@ -55,11 +56,15 @@ autocmd FileType *.php set ft=php.laravel
 autocmd Filetype *.blade.php set ft=php.laravel.blade
 set et
 au FileType html setl sw=2 sts=2 et
+au FileType javascript setl sw=2 sts=2 et
 au FileType php setl sw=2 sts=2 et
 au FileType python setl sw=4 sts=4 et
 au FileType ruby setl sw=2 sts=2 et
+auto FileType eruby set sw=2 sts=2 et
+autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
 let base16colorspace=256 " Access colors present in 256 color space
 set background=dark
+let g:used_javascript_libs = "angularjs"
 colorscheme base16-flat
 set nu
 syntax on
