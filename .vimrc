@@ -59,6 +59,9 @@ au FileType php setl sw=2 sts=2 et
 au FileType python setl sw=4 sts=4 et
 au FileType ruby setl sw=2 sts=2 et
 auto FileType eruby set sw=2 sts=2 et
+au FileType *.php set ft=php.laravel
+au BufEnter *.blade.php set ft=php.laravel.blade
+
 autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
 let base16colorspace=256 " Access colors present in 256 color space
 set background=dark
@@ -85,5 +88,3 @@ autocmd BufEnter * if expand("%:p:h") !~ '^/tmp' | silent! lcd %:p:h | endif
 "auto save when lost focus
 :au FocusLost * silent! wa
 
-au FileType *.php set ft=php.laravel
-au Filetype *.blade.php set ft=php.laravel.blade
