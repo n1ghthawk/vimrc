@@ -52,8 +52,6 @@ filetype plugin indent on " required!
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle commands are not allowed.
-autocmd FileType *.php set ft=php.laravel
-autocmd Filetype *.blade.php set ft=php.laravel.blade
 set et
 au FileType html setl sw=2 sts=2 et
 au FileType javascript setl sw=2 sts=2 et
@@ -86,3 +84,6 @@ autocmd BufEnter * if expand("%:p:h") !~ '^/tmp' | silent! lcd %:p:h | endif
 
 "auto save when lost focus
 :au FocusLost * silent! wa
+
+au FileType *.php set ft=php.laravel
+au Filetype *.blade.php set ft=php.laravel.blade
